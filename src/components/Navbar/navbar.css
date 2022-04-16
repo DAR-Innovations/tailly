@@ -1,0 +1,68 @@
+.navbar {
+  width: 100%;
+  padding: 25px 0;
+  background-color: #fff;
+}
+
+.navbar-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.navbar-logo {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 43px;
+}
+
+.navbar-navigation {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.navbar-navigation * {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  transition: all 0.3s ease;
+}
+
+.navbar-navigation *:hover {
+  color: #78ab9d;
+}
+
+.navbar-account {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar-account * {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.navbar-signup {
+  color: #255d4e;
+  border: 1px solid #255d4e;
+  padding: 8px 20px;
+  transition: all 0.3s ease-in;
+}
+
+.navbar-signup:hover {
+  background-color: #255d4e;
+  color: #fff;
+}
+
+.navbar-login:hover {
+  transition: all 0.3s ease;
+  color: #78ab9d;
+}

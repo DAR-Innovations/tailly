@@ -1,0 +1,52 @@
+.footer {
+  width: 100%;
+  background: #3b8f79;
+  padding: 80px 200px;
+}
+.footer-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-logo {
+  font-family: "Jost";
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 101px;
+  color: #ffffff;
+}
+
+.footer-info {
+  display: flex;
+  gap: 150px;
+}
+
+.footer-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+  margin-bottom: 19px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-list * {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #dbdbdb;
+  transition: all 0.3s ease;
+}
+
+.footer-list *:hover {
+  color: #1A483C;
+}

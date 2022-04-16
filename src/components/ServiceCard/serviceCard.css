@@ -1,0 +1,64 @@
+.serviceCard {
+  max-width: 330px;
+  padding: 25px 25px;
+  background-color: #fff;
+}
+
+.serviceCard-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+.serviceCard-photo {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.serviceCard-photo img {
+  width: 280px;
+  height: 200px;
+}
+
+.serviceCard-nameAge {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.info {
+  margin-bottom: 12px;
+}
+
+.title {
+  display: inline;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 5px;
+}
+
+.body {
+  display: inline;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.serviceCard-btn {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.serviceCard-btn button {
+  padding: 12px 30px;
+  background: #60a191;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
