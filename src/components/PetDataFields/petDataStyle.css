@@ -1,0 +1,32 @@
+.petData-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.petData-inputs input {
+  width: 100%;
+  padding: 12px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  background: #ffffff;
+  border: 1px solid #0e2513;
+  border-radius: 15px;
+}
+
+.petData-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.petData-btn button {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #197d23;
+  background: #cbfdb4;
+  border-radius: 20px;
+  padding: 13px 44px;
+}
