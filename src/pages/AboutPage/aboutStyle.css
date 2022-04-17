@@ -1,4 +1,261 @@
-img{
+.about {
+  width: 100%;
+  background: url("/src/assets/aboutBG.png")  no-repeat;
+  color: #000000;
+}
+
+.about-home {
+  margin-top:80px;
+  margin-bottom: 160px;
+}
+
+.about-home img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.home-text {
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.home-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+.body {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #053f2f;
+}
+
+.about-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+
+.about-description {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 56px;
+  margin-bottom: 165px;
+}
+
+.descrip-image {
+  width: 620px;
+  height: 348px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+
+.findPet-text {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titleMini {
+  max-width: 500px;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 28px;
+}
+
+.bodyMini {
+  max-width: 500px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.facilities-text {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-advice {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advice-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+.advice-text {
+  max-width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.about-advice img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.advice-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+@media (max-width: 1370px) {
+  .descrip-image {
+    width: 500px;
+    height: 300px;
+  }
+
+  .about-description {
+    gap: 96px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .descrip-image {
+    width: 450px;
+    height: 250px;
+  }
+
+  .about-description {
+    gap: 46px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .titleMini {
+    max-width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 49px;
+  }
+
+  .bodyMini {
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #053f2f;
+  }
+
+  .facilities-text {
+    gap: 10px;
+    margin-bottom: 150px;
+  }
+
+  .about-description {
+    display: block;
+  }
+
+  .descrip-image {
     width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 966px) {
+  .home-text {
+    max-width: 100%;
+  }
+
+  .home-body {
+    max-width: 500px;
+  }
+
+  .advice-text {
+    max-width: 100%;
+  }
+
+  .body {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 801px) {
+  .home-title {
+    font-size: 35px;
+  }
+
+  .home-body {
+    max-width: 500px;
+  }
+
+  .advice-title {
+    font-size: 30px;
+  }
+
+  .body {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .advice-title {
+    font-size: 30px;
+  }
+
+  .body {
+    max-width: 450px;
+  }
+
+  .about-home{
+    margin-bottom: 100px;
+  }
+
+  .facilities-text{
+    margin-bottom: 100px;
+  }
+
+  .about-description{
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 470px) {
+  .titleMini{
+    line-height: 100%;
+  }
+
+  .bodyMini{
+    font-size: 16px;
+  }
+  
+  .home-title{
+    font-size: 30px;
+  }
+
+  .advice-title{
+    line-height: 100%;
+  }
+
+  .body {
+    max-width:350px
+  }
 }

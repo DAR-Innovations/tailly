@@ -29,6 +29,12 @@ aside {
 
 html,
 body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
+html,
+body {
   height: 100%;
   width: 100%;
   font-size: 100%;

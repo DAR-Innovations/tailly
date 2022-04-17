@@ -7,7 +7,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import PetMapMarkersList from "../../components/MapMarkersList/PetMarkers/MapMarkersList";
 
 const MapPage = () => {
-  const MAP_TOKEN = process.env.REACT_APP_MAP_KEY;
+  const MAP_TOKEN = process.env.REACT_APP_MAP_TOKEN;
   const MAP_STYLE = process.env.REACT_APP_MAP_STYLE;
 
   const defaultCenter = defaultCenterCoord;

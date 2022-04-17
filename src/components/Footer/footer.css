@@ -3,6 +3,7 @@
   background: #3b8f79;
   padding: 80px 200px;
 }
+
 .footer-content {
   max-width: 1300px;
   margin: 0 auto;
@@ -48,5 +49,36 @@
 }
 
 .footer-list *:hover {
-  color: #1A483C;
+  color: #1a483c;
+}
+
+@media (max-width: 1220px) {
+  .footer {
+    padding: 80px 80px;
+  }
+}
+
+@media (max-width: 930px) {
+  .footer-logo{
+    font-size: 40px;
+  }
+  .footer-info{
+    gap: 70px;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer {
+    padding: 80px 40px;
+  }
+  .footer-list *{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 545px) {
+  .footer-info{
+    flex-direction: column;
+    gap: 30px;
+  }
 }
