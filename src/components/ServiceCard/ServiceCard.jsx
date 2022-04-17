@@ -2,7 +2,7 @@ import React from "react";
 import "./serviceCard.css";
 import TestPhoto from "../../assets/serviceTestPhoto.png";
 
-const ServiceCard = () => {
+const ServiceCard = ({ info, onClose }) => {
   return (
     <div className="serviceCard">
       <div className="serviceCard-content">
@@ -10,28 +10,26 @@ const ServiceCard = () => {
           <img src={TestPhoto} alt="pet" />
         </div>
         <div className="serviceCard-info">
-          <div className="serviceCard-nameAge">Pet Supermarket</div>
+          <div className="serviceCard-nameAge">{info?.name}</div>
 
           <div className="serviceCard-adress info">
             <p className="serviceCard-adress-title title">Adress:</p>
-            <p className="serviceCard-adress-body body">
-              Pushkina 33, near supermarket
-            </p>
+            <p className="serviceCard-adress-body body">{info?.adress}</p>
           </div>
 
           <div className="serviceCard-description info">
             <p className="serviceCard-description-title title">Description:</p>
             <p className="serviceCard-description-body body">
-              Brown colored, likes to play outside
+              {info?.description}
             </p>
           </div>
           <div className="serviceCard-contacts info">
             <p className="serviceCard-contacts-title title">Contacts:</p>
-            <p className="serviceCard-contacts-body body">+77053356653 </p>
+            <p className="serviceCard-contacts-body body">{info?.contacts}</p>
           </div>
         </div>
         <div className="serviceCard-btn">
-          <button>Close</button>
+          <button onClick={() => onClose({})}>Close</button>
         </div>
       </div>
     </div>
