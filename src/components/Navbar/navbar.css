@@ -99,6 +99,11 @@
   color: #78ab9d;
 }
 
+.navbar-profile-icon{
+  background: none;
+}
+
+
 @media (max-width: 750px) {
   .navbar-burger-open {
     display: block;
