@@ -1,0 +1,7 @@
+.advice-list {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: flex-start;
+  gap: 33px;
+  justify-content: center;
+}

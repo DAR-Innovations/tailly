@@ -51,11 +51,11 @@ const AboutPage = () => {
         </div>
         <div className="about-advice">
           <img src={AdviceImage} alt="dog" />
-          <div className="advice-text">
-            <div className="advice-title">
+          <div className="about-advice-text">
+            <div className="about-advice-title">
               The best care advice for your pet
             </div>
-            <div className="advice-body body">
+            <div className="about-advice-body body">
               If you are a new pet owner and you have never had any experience,
               our tips will help you with what to feed, how to care for and what
               nuances to know about your pet
@@ -63,7 +63,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

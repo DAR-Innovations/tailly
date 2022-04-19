@@ -1,11 +1,11 @@
 .about {
   width: 100%;
-  background: url("/src/assets/aboutBG.png")  no-repeat;
+  background: url("/src/assets/aboutBG.png") no-repeat;
   color: #000000;
 }
 
 .about-home {
-  margin-top:80px;
+  margin-top: 80px;
   margin-bottom: 160px;
 }
 
@@ -97,13 +97,13 @@
   align-items: center;
 }
 
-.advice-title {
+.about-advice-title {
   font-weight: 700;
   font-size: 40px;
   line-height: 49px;
 }
 
-.advice-text {
+.about-advice-text {
   max-width: 60%;
   text-align: center;
   display: flex;
@@ -116,9 +116,10 @@
   width: 100%;
   height: auto;
   margin-bottom: 40px;
+  border-radius: 20px;
 }
 
-.advice-title {
+.about-advice-title {
   font-weight: 700;
   font-size: 40px;
   line-height: 49px;
@@ -188,7 +189,7 @@
     max-width: 500px;
   }
 
-  .advice-text {
+  .about-advice-text {
     max-width: 100%;
   }
 
@@ -206,7 +207,7 @@
     max-width: 500px;
   }
 
-  .advice-title {
+  .about-advice-title {
     font-size: 30px;
   }
 
@@ -216,8 +217,7 @@
 }
 
 @media (max-width: 650px) {
-
-  .advice-title {
+  .about-advice-title {
     font-size: 30px;
   }
 
@@ -225,37 +225,37 @@
     max-width: 450px;
   }
 
-  .about-home{
+  .about-home {
     margin-bottom: 100px;
   }
 
-  .facilities-text{
+  .facilities-text {
     margin-bottom: 100px;
   }
 
-  .about-description{
+  .about-description {
     margin-bottom: 100px;
   }
 }
 
 @media (max-width: 470px) {
-  .titleMini{
+  .titleMini {
     line-height: 100%;
   }
 
-  .bodyMini{
+  .bodyMini {
     font-size: 16px;
   }
-  
-  .home-title{
+
+  .home-title {
     font-size: 30px;
   }
 
-  .advice-title{
+  .about-advice-title {
     line-height: 100%;
   }
 
   .body {
-    max-width:350px
+    max-width: 350px;
   }
 }

@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 1200;
   width: 100%;
   padding: 20px 30px;
   background-color: #fff;
@@ -63,6 +63,7 @@
   font-weight: 400;
   font-size: 18px;
   transition: all 0.3s ease;
+  color: rgb(0, 0, 0);
 }
 
 .navbar-navigation *:hover {
