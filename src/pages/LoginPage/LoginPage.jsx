@@ -1,10 +1,13 @@
-import React from 'react'
-import './loginStyle.css'
+import React from "react";
+import LoginFields from "../../components/LoginFields/LoginFields";
+import "./loginStyle.css";
 
 const LoginPage = () => {
   return (
-    <div>LoginPage</div>
-  )
-}
+    <div className="login">
+      <LoginFields />
+    </div>
+  );
+};
 
-export default LoginPage
+export default LoginPage;

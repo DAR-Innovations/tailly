@@ -1,10 +1,13 @@
-import React from 'react'
-import './registrationStyle.css'
+import React from "react";
+import RegisterFields from "../../components/RegisterFields/RegisterFields";
+import "./registrationStyle.css";
 
 const RegistrationPage = () => {
   return (
-    <div>RegistrationPage</div>
-  )
-}
+    <div className="register">
+      <RegisterFields />
+    </div>
+  );
+};
 
-export default RegistrationPage
+export default RegistrationPage;
