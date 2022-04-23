@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./adminAdvice.css";
-import { handleSubmit } from "./adminAdviceMethods";
+import { handleAdviceSubmit } from "./adminAdviceMethods";
 
 const AdminAdviceFields = () => {
   const titleRef = useRef();
@@ -15,7 +15,7 @@ const AdminAdviceFields = () => {
   }
 
   function addAdviceToDB() {
-    handleSubmit(imageFile, titleRef, shortBodyRef, fullBodyRef);
+    handleAdviceSubmit(imageFile, titleRef, shortBodyRef, fullBodyRef);
   }
 
   return (

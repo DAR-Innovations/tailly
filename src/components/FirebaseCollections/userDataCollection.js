@@ -11,4 +11,9 @@ const adviceCollectionRef = collection(
   process.env.REACT_APP_FIREBASE_ADVICEDB
 );
 
-export { usersDataCollectionRef, adviceCollectionRef };
+const servicesCollectionRef = collection(
+  db,
+  process.env.REACT_APP_FIREBASE_SERVICESDB
+);
+
+export { usersDataCollectionRef, adviceCollectionRef, servicesCollectionRef };

@@ -4,7 +4,7 @@ import { storage } from "../../../firebase/firebase.config";
 import { adviceCollectionRef } from "../../FirebaseCollections/userDataCollection";
 import { v4 } from "uuid";
 
-export const handleSubmit = async (
+export const handleAdviceSubmit = async (
   imageFile,
   titleRef,
   shortBodyRef,
@@ -12,7 +12,7 @@ export const handleSubmit = async (
 ) => {
   const imageRef = ref(
     storage,
-    `${process.env.REACT_APP_ADVICE_IMAGE_FOLDER}/${imageFile.name + v4()}`
+    `${process.env.REACT_APP_SERVICE_IMAGE_FOLDER}/${imageFile.name + v4()}`
   );
   await uploadBytes(imageRef, imageFile)
     .then(() => {
