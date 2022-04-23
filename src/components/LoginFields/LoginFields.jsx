@@ -6,7 +6,7 @@ import useIsAuth from "../Hooks/useIsAuth";
 import { useCookies } from "react-cookie";
 
 const LoginFields = () => {
-  const [cookies, setCookie] = useCookies(["userAuthData"]);
+  const [cookies, setCookie] = useCookies();
   const emailRef = useRef();
   const passwordRef = useRef();
   const isAuthLocal = useIsAuth();
@@ -25,7 +25,7 @@ const LoginFields = () => {
       onAuthStateChanged(auth, currentUser => {
         setIsAuth(true);
         setCookie(
-          "userAuthData",
+          process.env.REACT_APP_USER_COOKIE,
           { isAuth: true, uid: currentUser?.uid },
           {
             maxAge: 43200,

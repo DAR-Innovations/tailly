@@ -4,14 +4,16 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../firebase/firebase.config";
 import "./profileModal.css";
 import { useCookies } from "react-cookie";
+import useFetchUserData from "../Hooks/useFetchUserData";
 
 const ProfileModal = ({ isActive, setIsActive }) => {
-  const [cookies, setCookie, removeCookie] = useCookies(["userAuthData"]);
+  const fetchedData = useFetchUserData();
+  const [cookies, setCookie, removeCookie] = useCookies();
   const pageNavigation = useNavigate();
 
   async function logoutAccount() {
     await signOut(auth);
-    removeCookie("userAuthData");
+    removeCookie(process.env.REACT_APP_USER_COOKIE);
     setIsActive(false);
     pageNavigation("../");
   }
@@ -19,7 +21,9 @@ const ProfileModal = ({ isActive, setIsActive }) => {
   return (
     <div className={isActive ? "profileModalActive" : "profileModal"}>
       <div className="profileModal-content">
-        <div className="profileModal-name">Alexander Ivanov</div>
+        <div className="profileModal-name">
+          {fetchedData?.userName || "Loading"}
+        </div>
         <div className="profileModal-logout">
           <button onClick={logoutAccount}>Logout</button>
         </div>

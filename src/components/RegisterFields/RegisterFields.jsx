@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { auth } from "../../firebase/firebase.config";
+import { addDoc } from "firebase/firestore";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -7,14 +8,16 @@ import {
 import useIsAuth from "../Hooks/useIsAuth";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import { usersDataCollectionRef } from "../FirebaseCollections/userDataCollection";
 
 const RegisterFields = () => {
-  const [cookies, setCookie] = useCookies(["userAuthData"]);
+  const [cookies, setCookie] = useCookies();
   const emailRef = useRef();
   const nameRef = useRef();
   const passwordRef = useRef();
   const isAuthLocal = useIsAuth();
   const [isAuth, setIsAuth] = useState(isAuthLocal);
+
   const pageNavigation = useNavigate();
 
   useEffect(() => {
@@ -33,9 +36,19 @@ const RegisterFields = () => {
 
       onAuthStateChanged(auth, currentUser => {
         setIsAuth(true);
+
+        addDoc(usersDataCollectionRef, {
+          userName: nameRef.current.value,
+          userEmail: emailRef.current.value,
+          uid: currentUser?.uid,
+        });
+
         setCookie(
-          "userAuthData",
-          { isAuth: true, uid: currentUser?.uid },
+          process.env.REACT_APP_USER_COOKIE,
+          {
+            isAuth: true,
+            uid: currentUser?.uid,
+          },
           {
             maxAge: 43200,
           }
