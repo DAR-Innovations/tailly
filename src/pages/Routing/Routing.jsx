@@ -8,6 +8,7 @@ import LoginPage from "../LoginPage/LoginPage";
 import RegistrationPage from "../RegistrationPage/RegistrationPage";
 import ProfilePage from "../ProfilePage/ProfilePage";
 import PetDataPage from "../PetDataPage/PetDataPage";
+import AdminPage from "../AdminPage/AdminPage";
 
 const Routing = () => {
   return (
@@ -20,6 +21,8 @@ const Routing = () => {
       <Route path="/registration" element={<RegistrationPage />} />
       <Route path="/profile" element={<ProfilePage />} />
       <Route path="/leave-pet-data" element={<PetDataPage />} />
+
+      <Route path="/admin" element={<AdminPage />} />
     </Routes>
   );
 };
