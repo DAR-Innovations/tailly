@@ -6,8 +6,10 @@ import {
 } from "firebase/auth";
 import useIsAuth from "../Hooks/useIsAuth";
 import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 const RegisterFields = () => {
+  const [cookies, setCookie] = useCookies(["userAuthData"]);
   const emailRef = useRef();
   const nameRef = useRef();
   const passwordRef = useRef();
@@ -31,9 +33,12 @@ const RegisterFields = () => {
 
       onAuthStateChanged(auth, currentUser => {
         setIsAuth(true);
-        localStorage.setItem(
+        setCookie(
           "userAuthData",
-          JSON.stringify({ isAuth: true, uid: currentUser?.uid })
+          { isAuth: true, uid: currentUser?.uid },
+          {
+            maxAge: 43200,
+          }
         );
       });
     } catch (err) {

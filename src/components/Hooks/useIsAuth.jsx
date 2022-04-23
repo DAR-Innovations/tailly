@@ -1,13 +1,10 @@
-import { useState } from "react";
+import { useCookies } from "react-cookie";
 
 const useIsAuth = () => {
-  function getIsAuth() {
-    const localData = JSON.parse(localStorage.getItem("userAuthData")) || null;
-    const isAuth = localData?.isAuth;
-    return isAuth;
-  }
+  const [cookies] = useCookies(["userAuthData"]);
+  const isAuth = cookies?.userAuthData?.isAuth;
 
-  return getIsAuth();
+  return isAuth;
 };
 
 export default useIsAuth;

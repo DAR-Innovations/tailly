@@ -69,7 +69,7 @@ const Navbar = () => {
 
         {handleUser()}
 
-        <ProfileModal isActive={isModalActive} setActive={setIsModalActive} />
+        <ProfileModal isActive={isModalActive} setIsActive={setIsModalActive} />
 
         <div className="navbar-burger-open" onClick={handleBurgerBtn}>
           <img src={burgerMenu ? BurgerMenuClose : BurgerMenuOpen} alt="menu" />
@@ -77,7 +77,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-  
 };
 
 export default Navbar;
