@@ -6,6 +6,7 @@ import useIsAuth from "../Hooks/useIsAuth";
 import { useCookies } from "react-cookie";
 
 const LoginFields = () => {
+  // eslint-disable-next-line no-unused-vars
   const [cookies, setCookie] = useCookies();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -15,6 +16,7 @@ const LoginFields = () => {
 
   useEffect(() => {
     isAuth && pageNavigation("../");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuth]);
 
   async function loginAccount() {

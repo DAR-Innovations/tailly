@@ -8,6 +8,7 @@ import useFetchUserData from "../Hooks/useFetchUserData";
 
 const ProfileModal = ({ isActive, setIsActive }) => {
   const fetchedData = useFetchUserData();
+  // eslint-disable-next-line no-unused-vars
   const [cookies, setCookie, removeCookie] = useCookies();
   const pageNavigation = useNavigate();
 

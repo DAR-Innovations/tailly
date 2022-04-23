@@ -1,13 +1,13 @@
 import { getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { Cookies, useCookies } from "react-cookie";
+import { useCookies } from "react-cookie";
 import { usersDataCollectionRef } from "../FirebaseCollections/userDataCollection";
 import useIsAuth from "./useIsAuth";
 
 const useFetchUserData = () => {
   const isAuth = useIsAuth();
   const [userData, setUserData] = useState(null);
-  const [cookies, setCookie] = useCookies();
+  const [cookies] = useCookies();
 
   useEffect(() => {
     if (isAuth) {
@@ -28,6 +28,7 @@ const useFetchUserData = () => {
 
       getData();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return userData || null;

@@ -11,6 +11,7 @@ import { useCookies } from "react-cookie";
 import { usersDataCollectionRef } from "../FirebaseCollections/userDataCollection";
 
 const RegisterFields = () => {
+  // eslint-disable-next-line no-unused-vars
   const [cookies, setCookie] = useCookies();
   const emailRef = useRef();
   const nameRef = useRef();
@@ -22,6 +23,7 @@ const RegisterFields = () => {
 
   useEffect(() => {
     isAuth && pageNavigation("../");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuth]);
 
   async function registerAccount() {
