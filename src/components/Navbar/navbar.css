@@ -83,6 +83,7 @@
 }
 
 .navbar-signup {
+  border-radius: 10px;
   color: #255d4e;
   border: 1px solid #255d4e;
   padding: 5px 15px;
@@ -99,10 +100,9 @@
   color: #78ab9d;
 }
 
-.navbar-profile-icon{
+.navbar-profile-icon {
   background: none;
 }
-
 
 @media (max-width: 750px) {
   .navbar-burger-open {
