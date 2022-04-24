@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useIsAuth from "../Hooks/useIsAuth";
 import { useCookies } from "react-cookie";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
@@ -40,10 +40,25 @@ const LoginFields = () => {
   }
 
   return (
-    <div>
-      <input type="text" ref={emailRef} placeholder="Email" />
-      <input type="text" ref={passwordRef} placeholder="Password" />
-      <button onClick={loginAccount}>Login</button>
+    <div className="login-fields">
+      <div className="login-header">
+        <div className="login-title">Welcome back</div>
+        <div className="login-subtitle">Login to your account</div>
+      </div>
+
+      <div className="login-inputs">
+        <input type="email" ref={emailRef} placeholder="Email" />
+        <input type="password" ref={passwordRef} placeholder="Password" />
+      </div>
+
+      <button onClick={loginAccount} className="login-btn">
+        Login
+      </button>
+
+      <div className="login-register">
+        <div className="login-have-account">Already have an account?</div>
+        <Link to="/registration">Sign up</Link>
+      </div>
     </div>
   );
 };
