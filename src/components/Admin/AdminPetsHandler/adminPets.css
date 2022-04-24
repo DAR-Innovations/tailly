@@ -1,5 +1,6 @@
 .adminPets {
-  width: 470px;
+  width: 100%;
+  max-width: 470px;
   background-color: #fff;
   padding: 30px;
   border-radius: 20px;
