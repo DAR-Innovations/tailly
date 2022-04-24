@@ -20,8 +20,8 @@ const AdminPetsHandlerModal = ({ isActive, setIsActive, data }) => {
     return isActive ? "activeAdminModal" : "adminHandleModal";
   }
 
-  function addToDB() {
-    handlePetDataSubmit(
+  async function addToDB() {
+    await handlePetDataSubmit(
       data?.petAge,
       data?.petContacts,
       data?.petDescription,
@@ -31,7 +31,9 @@ const AdminPetsHandlerModal = ({ isActive, setIsActive, data }) => {
       petLocationRef.current.value
     );
 
-    deleteHandledPetData(data?.id);
+    await deleteHandledPetData(data?.id);
+
+    window.location.reload(false);
   }
 
   return (

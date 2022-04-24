@@ -5,6 +5,7 @@ import { defaultCenterCoord } from "./centerCoord";
 import Navbar from "../../components/Navbar/Navbar";
 import "mapbox-gl/dist/mapbox-gl.css";
 import PetMapMarkersList from "../../components/MapMarkersList/PetMarkers/MapMarkersList";
+import { Link } from "react-router-dom";
 
 const MapPage = () => {
   const MAP_TOKEN = process.env.REACT_APP_MAP_TOKEN;
@@ -32,6 +33,10 @@ const MapPage = () => {
       >
         <PetMapMarkersList />
       </ReactMapGL>
+
+      <div className="mapPage-create">
+        <Link to="/leave-pet-data">Leave data</Link>
+      </div>
     </div>
   );
 };

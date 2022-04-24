@@ -10,13 +10,13 @@ const AdminPetItem = ({ data }) => {
     setIsPetModalActive(!isPetModalActive);
   }
 
-  function deletePetData() {
+  async function deletePetData() {
     // eslint-disable-next-line no-restricted-globals
     const isPermitted = confirm(
       "Are you sure you want to delete this thing from the database?"
     );
     if (isPermitted) {
-      deleteHandledPetData(data?.id);
+      await deleteHandledPetData(data?.id);
       alert("Successfully deleted from database");
       window.location.reload(true);
     }

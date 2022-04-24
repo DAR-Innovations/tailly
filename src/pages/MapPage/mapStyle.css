@@ -7,3 +7,20 @@
   width: 100%;
   height: 100%;
 }
+
+.mapPage-create {
+  position: absolute;
+  z-index: 500;
+  right: 60px;
+  bottom: 60px;
+}
+
+.mapPage-create * {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  border-radius: 10px;
+  background: #255d4e;
+  color: #ffffff;
+  padding: 12px 20px;
+}
