@@ -6,7 +6,7 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import useIsAuth from "../Hooks/useIsAuth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { usersDataCollectionRef } from "../FirebaseCollections/userDataCollection";
 
@@ -62,11 +62,26 @@ const RegisterFields = () => {
   }
 
   return (
-    <div>
-      <input type="text" placeholder="Email" ref={emailRef} />
-      <input type="text" placeholder="Full name" ref={nameRef} />
-      <input type="text" placeholder="Password" ref={passwordRef} />
-      <button onClick={registerAccount}>Create</button>
+    <div className="register-fields">
+      <div className="register-header">
+        <div className="register-title">Let’s Get Started</div>
+        <div className="register-subtitle">Create an account to “Taily”</div>
+      </div>
+
+      <div className="register-inputs">
+        <input type="email" ref={emailRef} placeholder="Email" />
+        <input type="text" ref={nameRef} placeholder="Full name" />
+        <input type="password" ref={passwordRef} placeholder="Password" />
+      </div>
+
+      <button onClick={registerAccount} className="register-btn">
+        Sign up
+      </button>
+
+      <div className="register-login">
+        <div className="register-have-account">Already have an account?</div>
+        <Link to="/login">Log in</Link>
+      </div>
     </div>
   );
 };

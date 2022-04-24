@@ -1,6 +1,109 @@
-.register input {
-  padding: 10px;
-  margin: 10px;
-  color: rgb(0, 0, 0);
-  border: 2px solid black;
+.register {
+  width: 100%;
+  min-height: 100%;
+  background-image: url("../../assets/registerBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.register-content {
+  display: flex;
+}
+
+.register-image img {
+  max-width: 620px;
+  width: 100%;
+  height: auto;
+}
+
+.register-fields {
+  max-width: 430px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  padding: 60px 48px;
+  box-shadow: 0px 4px 20px rgba(11, 71, 13, 0.15);
+  border-radius: 20px;
+}
+
+.register-header {
+  margin-bottom: 60px;
+}
+
+.register-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 128%;
+  color: #000000;
+  margin-bottom: 7px;
+}
+
+.register-subtitle {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+.register-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.register-inputs input {
+  padding: 10px 15px;
+  background: #ffffff;
+  border: 1px solid #0e2513;
+  border-radius: 15px;
+}
+
+.register-btn {
+  border-radius: 20px;
+  justify-self: center;
+  align-self: center;
+  padding: 10px 35px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #197d23;
+  background-color: #cbfdb4;
+  margin-bottom: 60px;
+}
+
+.register-login {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.register-login a {
+  text-decoration-line: underline;
+  color: #197d23;
+}
+
+@media (max-width: 1300px) {
+  .register-image {
+    display: none;
+  }
+
+  .register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .register-content {
+  }
 }
