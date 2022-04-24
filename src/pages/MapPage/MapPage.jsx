@@ -6,6 +6,10 @@ import Navbar from "../../components/Navbar/Navbar";
 import "mapbox-gl/dist/mapbox-gl.css";
 import PetMapMarkersList from "../../components/MapMarkersList/PetMarkers/MapMarkersList";
 import { Link } from "react-router-dom";
+import mapboxgl from "mapbox-gl";
+mapboxgl.workerClass =
+  // eslint-disable-next-line import/no-webpack-loader-syntax
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const MapPage = () => {
   const MAP_TOKEN = process.env.REACT_APP_MAP_TOKEN;

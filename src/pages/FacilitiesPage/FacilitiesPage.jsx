@@ -5,6 +5,10 @@ import { defaultCenterCoord } from "./centerCoord";
 import Navbar from "../../components/Navbar/Navbar";
 import "mapbox-gl/dist/mapbox-gl.css";
 import ServiceMapMarkersList from "../../components/MapMarkersList/ServiceMarkers/MapMarkersList";
+import mapboxgl from "mapbox-gl";
+mapboxgl.workerClass =
+  // eslint-disable-next-line import/no-webpack-loader-syntax
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const FacilitiesPage = () => {
   const MAP_TOKEN = process.env.REACT_APP_MAP_TOKEN;
