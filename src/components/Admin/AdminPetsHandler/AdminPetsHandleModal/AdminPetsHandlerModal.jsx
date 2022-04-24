@@ -28,10 +28,11 @@ const AdminPetsHandlerModal = ({ isActive, setIsActive, data }) => {
       data?.petLastSeen,
       data?.petName,
       data?.uid,
-      petLocationRef.current.value
+      petLocationRef.current.value,
+      data?.petImageURL
     );
 
-    await deleteHandledPetData(data?.id);
+    await deleteHandledPetData(data?.id, data?.petImageName);
 
     window.location.reload(false);
   }
@@ -42,6 +43,9 @@ const AdminPetsHandlerModal = ({ isActive, setIsActive, data }) => {
         <div className="adminHandleModal-title">Pet information</div>
 
         <div className="adminHandleModal-pet-info">
+          <div className="adminHandleModal-pet-image">
+            <img src={data?.petImageURL} alt="pet" />
+          </div>
           <div className="adminHandleModal-pet-name">{data?.petName}</div>
           <div className="adminHandleModal-pet-adress">{data?.petLastSeen}</div>
         </div>

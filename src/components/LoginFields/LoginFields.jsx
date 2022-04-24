@@ -30,7 +30,7 @@ const LoginFields = () => {
           process.env.REACT_APP_USER_COOKIE,
           { isAuth: true, uid: currentUser?.uid },
           {
-            maxAge: 43200,
+            maxAge: process.env.REACT_APP_USER_COOKIE_MAX_AGE,
           }
         );
       });

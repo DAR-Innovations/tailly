@@ -4,7 +4,6 @@ import AdminPetsHandlerModal from "../AdminPetsHandleModal/AdminPetsHandlerModal
 
 const AdminPetItem = ({ data }) => {
   const [isPetModalActive, setIsPetModalActive] = useState(false);
-  console.log(data);
 
   function handleModal() {
     setIsPetModalActive(!isPetModalActive);
@@ -16,7 +15,7 @@ const AdminPetItem = ({ data }) => {
       "Are you sure you want to delete this thing from the database?"
     );
     if (isPermitted) {
-      await deleteHandledPetData(data?.id);
+      await deleteHandledPetData(data?.id, data?.petImageName);
       alert("Successfully deleted from database");
       window.location.reload(true);
     }

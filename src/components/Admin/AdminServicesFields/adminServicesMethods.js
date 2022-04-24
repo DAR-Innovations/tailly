@@ -21,7 +21,6 @@ export const handleServiceSubmit = async (
       getDownloadURL(imageRef)
         .then(url => {
           const locationValue = locationRef.current.value;
-          console.log(locationValue);
           const locationCoord = locationValue.split(",");
           addDoc(servicesCollectionRef, {
             serviceName: nameRef.current.value,

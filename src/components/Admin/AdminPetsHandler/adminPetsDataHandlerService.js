@@ -1,5 +1,6 @@
 import { addDoc, deleteDoc, doc } from "firebase/firestore";
-import { db } from "../../../firebase/firebase.config";
+import { deleteObject, ref } from "firebase/storage";
+import { db, storage } from "../../../firebase/firebase.config";
 import { userPetsCollectionRef } from "../../FirebaseCollections/userDataCollection";
 
 const handlePetDataSubmit = async (
@@ -9,7 +10,8 @@ const handlePetDataSubmit = async (
   petLastSeen,
   petName,
   uid,
-  petLocation
+  petLocation,
+  petImageURL
 ) => {
   try {
     const coordinates = petLocation.split(",");
@@ -21,6 +23,7 @@ const handlePetDataSubmit = async (
       petLatitude: coordinates[0],
       petLongitude: coordinates[1],
       petName: petName,
+      petImageURL: petImageURL,
       uid: uid,
     });
 
@@ -30,8 +33,12 @@ const handlePetDataSubmit = async (
   }
 };
 
-const deleteHandledPetData = async id => {
+const deleteHandledPetData = async (id, petImageName) => {
   try {
+    const imageStoragePath = `${process.env.REACT_APP_PETS_IMAGE_FOLDER}/${petImageName}`;
+    const imageFileRef = ref(storage, imageStoragePath);
+    await deleteObject(imageFileRef);
+
     const petDoc = doc(db, process.env.REACT_APP_FIREBASE_HANDLE_PETS_DATA, id);
     await deleteDoc(petDoc);
   } catch (error) {

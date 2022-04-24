@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useUID from "../Hooks/useUID";
 import { petDataSubmit } from "./petDataFieldsMethods";
 import "./petDataStyle.css";
 
 const PetDataFields = () => {
+  const [imageFile, setImageFile] = useState();
   const nameRef = useRef();
   const ageRef = useRef();
   const colorRef = useRef();
@@ -14,16 +15,23 @@ const PetDataFields = () => {
   const uid = useUID();
   const pageNavigation = useNavigate();
 
-  function addDataToDB() {
-    petDataSubmit(
+  async function addDataToDB() {
+    await petDataSubmit(
       ageRef.current.value,
       contactsRef.current.value,
       descripRef.current.value,
       lastSeenRef.current.value,
       nameRef.current.value,
-      uid
+      uid,
+      imageFile
     );
     pageNavigation("../map");
+  }
+
+  function handleImageFileChange(e) {
+    if (e.target.files[0]) {
+      setImageFile(e.target.files[0]);
+    }
   }
 
   return (
@@ -44,6 +52,7 @@ const PetDataFields = () => {
           className="additional"
           ref={descripRef}
         />
+        <input type="file" onChange={handleImageFileChange} />
       </div>
 
       <div className="petData-btn">
