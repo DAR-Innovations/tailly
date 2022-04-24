@@ -1,0 +1,63 @@
+.adminPets {
+  width: 470px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(11, 71, 13, 0.15);
+}
+
+.adminPets-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.adminPets-content {
+  width: 100%;
+}
+
+/* List */
+.adminPets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Item */
+.adminPets-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.adminPets-handle {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.adminPets-handle button {
+  font-weight: 600;
+  padding: 7px 15px;
+  font-size: 12px;
+  border-radius: 13px;
+}
+
+.adminPets-body {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000;
+}
+
+.adminPets-handle-btn {
+  color: #116b1a;
+  background: #cbfdb4;
+}
+
+.adminPets-handle-delete {
+  color: #f3dcdc;
+  background: #e46453;
+}

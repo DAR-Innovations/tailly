@@ -1,0 +1,79 @@
+.adminHandleModal {
+  display: none;
+}
+
+.activeAdminModal {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  background-color: rgba(5, 26, 8, 0.411);
+}
+
+.adminHandleModal-content {
+  cursor: default;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 43px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.adminHandleModal-title {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.adminHandleModal-pet-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.adminHandleModal-pet-info * {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.adminHandleModal-location {
+  margin-bottom: 40px;
+}
+
+.adminHandleModal-location input {
+  width: 100%;
+  padding: 7px 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  background: #ffffff;
+  border: 1px solid #0e2513;
+  border-radius: 12px;
+}
+
+.adminHandleModal-btn {
+  display: flex;
+  align-self: center;
+}
+
+.adminHandleModal-btn button {
+  font-weight: 600;
+  font-size: 13px;
+  color: #197d23;
+  background: #cbfdb4;
+  border-radius: 13px;
+  padding: 12px 30px;
+}

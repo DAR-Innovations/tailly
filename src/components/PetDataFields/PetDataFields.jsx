@@ -9,6 +9,7 @@ const PetDataFields = () => {
         <input type="text" placeholder="Pet age" />
         <input type="text" placeholder="Pet color" />
         <input type="text" placeholder="Last seen" />
+        <input type="text" placeholder="Owner contacts" />
         <input
           type="text"
           placeholder="Additional description"
