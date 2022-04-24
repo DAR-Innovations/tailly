@@ -17,8 +17,8 @@ const AdminServiceFields = () => {
     }
   }
 
-  function addAdviceToDB() {
-    handleServiceSubmit(
+  async function addAdviceToDB() {
+    await handleServiceSubmit(
       nameRef,
       adressRef,
       descripRef,

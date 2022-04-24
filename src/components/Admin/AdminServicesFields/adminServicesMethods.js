@@ -14,13 +14,14 @@ export const handleServiceSubmit = async (
 ) => {
   const imageRef = ref(
     storage,
-    `${process.env.REACT_APP_ADVICE_IMAGE_FOLDER}/${imageFile.name + v4()}`
+    `${process.env.REACT_APP_SERVICE_IMAGE_FOLDER}/${imageFile.name + v4()}`
   );
   await uploadBytes(imageRef, imageFile)
     .then(() => {
       getDownloadURL(imageRef)
         .then(url => {
           const locationValue = locationRef.current.value;
+          console.log(locationValue);
           const locationCoord = locationValue.split(",");
           addDoc(servicesCollectionRef, {
             serviceName: nameRef.current.value,

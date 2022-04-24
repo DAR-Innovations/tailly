@@ -12,7 +12,7 @@ export const handleAdviceSubmit = async (
 ) => {
   const imageRef = ref(
     storage,
-    `${process.env.REACT_APP_SERVICE_IMAGE_FOLDER}/${imageFile.name + v4()}`
+    `${process.env.REACT_APP_ADVICE_IMAGE_FOLDER}/${imageFile.name + v4()}`
   );
   await uploadBytes(imageRef, imageFile)
     .then(() => {
