@@ -24,3 +24,19 @@
   color: #ffffff;
   padding: 12px 20px;
 }
+
+@media (max-width: 430px) {
+  .mapPage-create {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  .mapPage-create * {
+    font-size: 13px;
+    line-height: 22px;
+    border-radius: 10px;
+    background: #255d4e;
+    color: #ffffff;
+    padding: 12px 20px;
+  }
+}

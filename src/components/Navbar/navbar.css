@@ -30,19 +30,19 @@
   z-index: 1000;
   background-color: #fff;
   top: 82px;
-  left: 20px;
-  right: 20px;
+  left: 30px;
+  right: 30px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  padding: 70px 0;
+  gap: 50px;
+  padding: 50px 0;
   border-radius: 20px;
   box-shadow: 0px 4px 20px rgba(11, 71, 13, 0.15);
 }
 
 .navbar-burger * {
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .navbar-logo {
