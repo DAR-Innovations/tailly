@@ -12,7 +12,7 @@ const handlePetDataSubmit = async (
   petLocation
 ) => {
   try {
-    const coordinates = petLocation.split(" ");
+    const coordinates = petLocation.split(",");
     addDoc(userPetsCollectionRef, {
       petAge: petAge,
       petContacts: petContacts,
