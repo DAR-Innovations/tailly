@@ -32,7 +32,11 @@ const PetDataFields = () => {
         <input type="text" placeholder="Pet name" ref={nameRef} />
         <input type="text" placeholder="Pet age" ref={ageRef} />
         <input type="text" placeholder="Pet color" ref={colorRef} />
-        <input type="text" placeholder="Last seen" ref={lastSeenRef} />
+        <input
+          type="text"
+          placeholder="Last location (address)"
+          ref={lastSeenRef}
+        />
         <input type="text" placeholder="Owner contacts" ref={contactsRef} />
         <input
           type="text"
