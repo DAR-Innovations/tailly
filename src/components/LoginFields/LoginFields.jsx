@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase/firebase.config";
 import { useNavigate } from "react-router-dom";
 import useIsAuth from "../Hooks/useIsAuth";
 import { useCookies } from "react-cookie";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase/firebase.config";
 
 const LoginFields = () => {
   // eslint-disable-next-line no-unused-vars
