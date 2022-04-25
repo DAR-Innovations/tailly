@@ -5,6 +5,7 @@ import { storage } from "../../firebase/firebase.config";
 import { petsDataHandleCollectionRef } from "../FirebaseCollections/userDataCollection";
 
 const petDataSubmit = async (
+  petColor,
   petAge,
   petContacts,
   petDescription,
@@ -23,6 +24,7 @@ const petDataSubmit = async (
       getDownloadURL(imageRef)
         .then(url => {
           addDoc(petsDataHandleCollectionRef, {
+            petColor: petColor,
             petAge: petAge,
             petContacts: petContacts,
             petDescription: petDescription,

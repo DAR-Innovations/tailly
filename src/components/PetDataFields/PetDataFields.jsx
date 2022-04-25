@@ -16,7 +16,8 @@ const PetDataFields = () => {
   const pageNavigation = useNavigate();
 
   async function addDataToDB() {
-    await petDataSubmit(
+    petDataSubmit(
+      colorRef.current.value,
       ageRef.current.value,
       contactsRef.current.value,
       descripRef.current.value,
@@ -24,8 +25,7 @@ const PetDataFields = () => {
       nameRef.current.value,
       uid,
       imageFile
-    );
-    pageNavigation("../map");
+    ).then(() => pageNavigation("../map"));
   }
 
   function handleImageFileChange(e) {

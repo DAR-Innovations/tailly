@@ -1,22 +1,21 @@
 import React from "react";
 import "./petCard.css";
-import TestPhoto from "../../assets/petTestPhoto.png";
 
 const PetCard = ({ info, onClose }) => {
-  const nameAge = `${info?.name}, ${info?.age} years old`;
-  const additionalDescript = `${info?.color}, ${info?.description}`;
+  const nameAge = `${info?.petName}, ${info?.petAge} years old`;
+  const additionalDescript = `${info?.petColor}, ${info?.petDescription}`;
   return (
     <div className="petCard">
       <div className="petCard-content">
         <div className="petCard-photo">
-          <img src={TestPhoto} alt="pet" />
+          <img src={info?.petImageURL} alt="pet" />
         </div>
         <div className="petCard-info">
           <div className="petCard-nameAge">{nameAge}</div>
 
           <div className="petCard-adress info">
             <p className="petCard-adress-title title">Last seen:</p>
-            <p className="petCard-adress-body body">{info?.lastSeen}</p>
+            <p className="petCard-adress-body body">{info?.petLastSeen}</p>
           </div>
 
           <div className="petCard-description info">
@@ -27,7 +26,7 @@ const PetCard = ({ info, onClose }) => {
           </div>
           <div className="petCard-contacts info">
             <p className="petCard-contacts-title title">Owner contacts:</p>
-            <p className="petCard-contacts-body body">{info?.contacts}</p>
+            <p className="petCard-contacts-body body">{info?.petContacts}</p>
           </div>
         </div>
         <div className="petCard-btn">

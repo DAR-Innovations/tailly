@@ -14,8 +14,8 @@ const AdminAdviceFields = () => {
     }
   }
 
-  function addAdviceToDB() {
-    handleAdviceSubmit(imageFile, titleRef, shortBodyRef, fullBodyRef);
+  async function addAdviceToDB() {
+    await handleAdviceSubmit(imageFile, titleRef, shortBodyRef, fullBodyRef);
   }
 
   return (

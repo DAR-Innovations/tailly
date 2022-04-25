@@ -21,7 +21,7 @@ const AdminPetsHandlerModal = ({ isActive, setIsActive, data }) => {
   }
 
   async function addToDB() {
-    await handlePetDataSubmit(
+    handlePetDataSubmit(
       data?.petAge,
       data?.petContacts,
       data?.petDescription,
@@ -29,12 +29,11 @@ const AdminPetsHandlerModal = ({ isActive, setIsActive, data }) => {
       data?.petName,
       data?.uid,
       petLocationRef.current.value,
-      data?.petImageURL
-    );
-
-    await deleteHandledPetData(data?.id, data?.petImageName);
-
-    window.location.reload(false);
+      data?.petImageURL,
+      data?.petColor
+    )
+      .then(() => deleteHandledPetData(data?.id))
+      .then(() => window.location.reload(false));
   }
 
   return (

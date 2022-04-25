@@ -11,7 +11,8 @@ const handlePetDataSubmit = async (
   petName,
   uid,
   petLocation,
-  petImageURL
+  petImageURL,
+  petColor
 ) => {
   try {
     const coordinates = petLocation.split(",");
@@ -24,6 +25,7 @@ const handlePetDataSubmit = async (
       petLongitude: coordinates[1],
       petName: petName,
       petImageURL: petImageURL,
+      petColor: petColor,
       uid: uid,
     });
 
@@ -33,7 +35,7 @@ const handlePetDataSubmit = async (
   }
 };
 
-const deleteHandledPetData = async (id, petImageName) => {
+const deletePetDataFromDB = async (id, petImageName) => {
   try {
     const imageStoragePath = `${process.env.REACT_APP_PETS_IMAGE_FOLDER}/${petImageName}`;
     const imageFileRef = ref(storage, imageStoragePath);
@@ -46,4 +48,13 @@ const deleteHandledPetData = async (id, petImageName) => {
   }
 };
 
-export { handlePetDataSubmit, deleteHandledPetData };
+const deleteHandledPetData = async id => {
+  try {
+    const petDoc = doc(db, process.env.REACT_APP_FIREBASE_HANDLE_PETS_DATA, id);
+    await deleteDoc(petDoc);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { handlePetDataSubmit, deleteHandledPetData, deletePetDataFromDB };
