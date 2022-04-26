@@ -1,16 +1,16 @@
 import React from "react";
 import "./adviceList.css";
-import AdviceCard from '../AdviceCard/AdviceCard'
+import AdviceCard from "../AdviceCard/AdviceCard";
+import useFetchAdviceData from "../Hooks/useFetchAdviceData";
 
 const AdviceList = () => {
+  const fetchedAdvice = useFetchAdviceData();
+
   return (
     <div className="advice-list">
-      <AdviceCard />
-      <AdviceCard />
-      <AdviceCard />
-      <AdviceCard />
-      <AdviceCard />
-      <AdviceCard />
+      {fetchedAdvice?.map(advice => (
+        <AdviceCard key={advice.id} info={advice} />
+      ))}
     </div>
   );
 };

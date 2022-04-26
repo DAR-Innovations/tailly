@@ -14,8 +14,7 @@
 }
 
 .advice-item-image img {
-  max-width: 300px;
-  height: 200px;
+  max-width: 100%;
 }
 
 .advice-item-text {
